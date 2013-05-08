@@ -1,9 +1,0 @@
-# When installing wordpress on a separate dir inside your $_SERVER['DOCUMENT_ROOT']
-# you may need to create a rewrite rule, otherwise wordpress will start complaining...
-#
-
-RewriteEngine On
-RewriteBase /
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /TPL/wordpress/$1 [L]
